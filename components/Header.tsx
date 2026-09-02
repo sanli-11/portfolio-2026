@@ -1,3 +1,6 @@
+import Link from "next/link";
+import { Slash } from "lucide-react";
+
 export default function Header() {
   return (
     <>
@@ -7,6 +10,15 @@ export default function Header() {
       >
         Skip to content
       </a>
+
+      <header className="mx-auto flex max-w-450 items-center justify-between px-4 pt-12">
+        <Link
+          href="/"
+          className="group grid size-8 place-content-center rounded-lg bg-stone-100"
+        >
+          <Slash color="black" size={18} strokeWidth={5} />
+        </Link>
+      </header>
     </>
   );
 }
