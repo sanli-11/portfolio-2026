@@ -39,7 +39,7 @@ export default function AnimatedButton({
   return (
     <button
       type={type}
-      className={`group relative isolate overflow-hidden rounded-md shadow-[0_0_1px_0.1px] ${inverted ? "shadow-stone-900 hover:shadow-stone-100" : "shadow-stone-100 hover:shadow-stone-900"} ${variant.container} transition-shadow delay-100 ${className}`}
+      className={`group relative isolate overflow-hidden rounded-md border ${inverted ? "border-stone-900 hover:border-stone-100" : "border-stone-100 hover:border-stone-900"} ${variant.container} transition-colors delay-100 ${className}`}
       {...props}
     >
       <span

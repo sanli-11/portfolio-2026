@@ -7,8 +7,8 @@ import { siGithub } from "simple-icons";
 
 export default function Header() {
   return (
-    <>
-      <Fragment>
+    <div className="relative z-10">
+      <>
         <a
           href="#"
           className="fixed -top-16 rounded-br-md bg-stone-400 px-6 py-2.5 text-black outline-offset-4 outline-red-400 transition-discrete duration-600 hover:top-0 hover:outline-2 focus:outline-2 focus-visible:top-0"
@@ -37,7 +37,7 @@ export default function Header() {
             </AnimatedButton>
           </nav>
         </header>
-      </Fragment>
+      </>
 
       <nav className="fixed right-16 bottom-8">
         <AnimatedButton
@@ -50,6 +50,6 @@ export default function Header() {
           <span className="hidden lg:inline">Download CV</span>
         </AnimatedButton>
       </nav>
-    </>
+    </div>
   );
 }
