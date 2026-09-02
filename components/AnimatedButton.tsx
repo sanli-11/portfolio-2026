@@ -4,7 +4,7 @@ import type { ButtonHTMLAttributes } from "react";
 
 const sizeVariants = {
   icon: {
-    container: "min-w-10 max-h-10",
+    container: "min-w-8 max-h-10",
     padding: "px-3 py-2",
   },
   small: {
@@ -27,7 +27,6 @@ interface AnimatedButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 }
 
 export default function AnimatedButton({
-  title,
   size = "medium",
   inverted = false,
   type = "button",
@@ -59,7 +58,7 @@ export default function AnimatedButton({
         </span>
       </span>
 
-      <span className="sr-only">{title ?? children}</span>
+      <span className="sr-only">{children}</span>
     </button>
   );
 }

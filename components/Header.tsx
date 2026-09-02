@@ -1,6 +1,8 @@
 import Link from "next/link";
 import { Slash } from "lucide-react";
+import { siGithub } from "simple-icons";
 import AnimatedButton from "@/components/AnimatedButton";
+import SimpleIconSvg from "@/components/SimpleIconSvg";
 
 export default function Header() {
   return (
@@ -24,6 +26,12 @@ export default function Header() {
           <AnimatedButton size="small">About</AnimatedButton>
           <AnimatedButton size="small">Projects</AnimatedButton>
           <AnimatedButton size="small">Contact</AnimatedButton>
+          <AnimatedButton inverted size="icon">
+            <SimpleIconSvg
+              icon={siGithub}
+              className="delay-200 group-hover:invert"
+            />
+          </AnimatedButton>
         </nav>
       </header>
     </>
