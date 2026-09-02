@@ -1,6 +1,6 @@
 import { Fragment } from "react";
 import Link from "next/link";
-import AnimatedButton from "@/components/AnimatedButton";
+import AnimatedAnchor from "@/components/AnimatedAnchor";
 import SimpleIconSvg from "@/components/SimpleIconSvg";
 import { FileUser, Slash } from "lucide-react";
 import { siGithub } from "simple-icons";
@@ -25,26 +25,44 @@ export default function Header() {
           </Link>
 
           <nav className="flex items-center justify-end gap-6">
-            <AnimatedButton size="small">About</AnimatedButton>
-            <AnimatedButton size="small">Projects</AnimatedButton>
-            <AnimatedButton size="small">Contact</AnimatedButton>
+            <AnimatedAnchor size="small" href="#about">
+              About
+            </AnimatedAnchor>
+            <AnimatedAnchor size="small" href="#projects">
+              Projects
+            </AnimatedAnchor>
+            <AnimatedAnchor size="small" href="contact">
+              Contact
+            </AnimatedAnchor>
 
-            <AnimatedButton inverted size="icon">
+            <AnimatedAnchor
+              inverted
+              size="icon"
+              href="https://github.com/sanli-11"
+              rel="noopener noreferrer"
+            >
               <SimpleIconSvg
                 icon={siGithub}
                 className="delay-200 group-hover:invert"
               />
-            </AnimatedButton>
+            </AnimatedAnchor>
           </nav>
         </header>
       </>
 
       <nav className="fixed top-1/2 right-0 translate-x-24 -translate-y-1/2">
-        <AnimatedButton inverted size="large" className="rotate-270">
+        <AnimatedAnchor
+          inverted
+          size="large"
+          download
+          href="/assets/files/Hassan-Ali-CV.pdf"
+          rel="noopener noreferrer"
+          className="rotate-270"
+        >
           <span className="lg:hidden">CV</span>
           <span className="hidden lg:inline">Download CV</span>
           <FileUser className="ml-4 rotate-90 delay-200 hover:invert" />
-        </AnimatedButton>
+        </AnimatedAnchor>
       </nav>
     </div>
   );
