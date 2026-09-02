@@ -39,15 +39,11 @@ export default function Header() {
         </header>
       </>
 
-      <nav className="fixed right-16 bottom-8">
-        <AnimatedButton
-          inverted
-          size="small"
-          className="fixed right-0 bottom-0"
-        >
-          <FileUser className="delay-200 hover:invert" />
+      <nav className="fixed top-1/2 right-0 translate-x-24 -translate-y-1/2">
+        <AnimatedButton inverted size="large" className="rotate-270">
           <span className="lg:hidden">CV</span>
           <span className="hidden lg:inline">Download CV</span>
+          <FileUser className="ml-4 rotate-90 delay-200 hover:invert" />
         </AnimatedButton>
       </nav>
     </div>
