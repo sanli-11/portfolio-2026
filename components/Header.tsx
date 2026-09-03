@@ -31,7 +31,7 @@ export default function Header() {
             <AnimatedAnchor size="small" href="#projects">
               Projects
             </AnimatedAnchor>
-            <AnimatedAnchor size="small" href="contact">
+            <AnimatedAnchor size="small" href="#contact">
               Contact
             </AnimatedAnchor>
 
