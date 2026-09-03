@@ -27,24 +27,20 @@ export default function Projects() {
       className="bg-background relative w-full text-white"
     >
       <div className="relative h-[400vh] w-full">
-        <motion.hgroup
-          style={{
-            scale,
-            opacity,
-          }}
-          className="sticky top-0 z-10 grid h-screen w-full origin-center place-content-center text-center will-change-transform"
-        >
-          <h2 className="mx-auto max-w-2xl text-7xl/21">
-            Taciti sociosqu ad litora torquent
-          </h2>
+        <div className="pointer-events-none sticky top-0 z-10 grid h-dvh w-full place-content-center text-center">
+          <motion.hgroup style={{ scale, opacity }}>
+            <h2 className="mx-auto max-w-2xl text-7xl/21">
+              Taciti sociosqu ad litora torquent
+            </h2>
 
-          <p className="mx-auto max-w-sm">
-            Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus ex
-            sapien vitae pellentesque sem pretium tellus placerat in.
-          </p>
-        </motion.hgroup>
+            <p className="mx-auto max-w-sm">
+              Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus
+              ex sapien vitae pellentesque sem pretium tellus placerat in.
+            </p>
+          </motion.hgroup>
+        </div>
 
-        <CardStack />
+        <CardStack parentRef={sectionRef} />
       </div>
     </section>
   );

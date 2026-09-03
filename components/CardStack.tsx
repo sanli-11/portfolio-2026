@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef } from "react";
+import { RefObject, useEffect, useRef } from "react";
 
 const cards = [
   {
@@ -31,22 +31,29 @@ const cards = [
   },
 ];
 
-export default function CardStack() {
-  const sectionRef = useRef<HTMLElement>(null);
+interface CardStackProps {
+  parentRef: RefObject<HTMLElement | null>;
+}
+
+export default function CardStack({ parentRef }: CardStackProps) {
   const cardsRef = useRef<(HTMLElement | null)[]>([]);
 
   useEffect(() => {
     let animationFrame = 0;
 
     const update = () => {
-      const section = sectionRef.current;
-
-      if (!section) return;
+      const section = parentRef.current;
+      if (!section) {
+        animationFrame = requestAnimationFrame(update);
+        return;
+      }
 
       const rect = section.getBoundingClientRect();
       const scrollDistance = section.offsetHeight - window.innerHeight;
-
-      if (scrollDistance <= 0) return;
+      if (scrollDistance <= 0) {
+        animationFrame = requestAnimationFrame(update);
+        return;
+      }
 
       const progress = Math.min(1, Math.max(0, -rect.top / scrollDistance));
       const cardCount = cards.length;
@@ -88,7 +95,6 @@ export default function CardStack() {
 
         const stackStart = index / cardCount;
         const stackEnd = (index + 1) / cardCount;
-
         let cardProgress =
           (stackProgress - stackStart) / (stackEnd - stackStart);
         cardProgress = Math.max(0, Math.min(1, cardProgress));
@@ -97,20 +103,18 @@ export default function CardStack() {
         for (let j = index + 1; j < cardCount; j++) {
           const jStart = j / cardCount;
           const jEnd = (j + 1) / cardCount;
-          const jProg = (stackProgress - jStart) / (jEnd - jStart);
-          newerCardsEntered += Math.max(0, Math.min(1, jProg));
+          const jProgress = (stackProgress - jStart) / (jEnd - jStart);
+          newerCardsEntered += Math.max(0, Math.min(1, jProgress));
         }
 
         const range = peelRanges[index];
         let rawPeel = 0;
         if (range.end > range.start)
           rawPeel = (pullProgress - range.start) / (range.end - range.start);
-
         rawPeel = Math.max(0, Math.min(1, rawPeel));
 
         const smoothstep = rawPeel * rawPeel * (3 - 2 * rawPeel);
         const ultraFluidEase = Math.pow(smoothstep, 1.2);
-
         const peelYPx = ultraFluidEase * targetPeelDistances[index];
 
         const maxBlur = 6;
@@ -132,17 +136,18 @@ export default function CardStack() {
     };
 
     window.addEventListener("scroll", handleScroll, { passive: true });
-    update();
+
+    animationFrame = requestAnimationFrame(update);
 
     return () => {
       window.removeEventListener("scroll", handleScroll);
       if (animationFrame) cancelAnimationFrame(animationFrame);
     };
-  }, []);
+  }, [parentRef]);
 
   return (
-    <section ref={sectionRef} className="absolute top-0 z-20 h-[400vh] w-full">
-      <div className="sticky top-0 grid h-dvh place-content-center overflow-hidden">
+    <div className="pointer-events-none absolute inset-0 z-20">
+      <div className="sticky top-0 grid h-dvh w-full place-content-center">
         <div className="relative aspect-4/3 w-3xl perspective-distant">
           {cards.map((card, index) => (
             <article
@@ -166,6 +171,6 @@ export default function CardStack() {
           ))}
         </div>
       </div>
-    </section>
+    </div>
   );
 }
