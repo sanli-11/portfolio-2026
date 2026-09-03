@@ -39,19 +39,19 @@ export default function AnimatedAnchor({
   return (
     <a
       href={href}
-      className={`group relative isolate grid overflow-hidden rounded-md border ${inverted ? "border-stone-900 hover:border-stone-100" : "border-stone-100 hover:border-stone-900"} ${variant.container} transition-colors delay-100 ${className}`}
+      className={`group relative isolate grid overflow-hidden rounded-md border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
       {...props}
     >
       <span
         aria-hidden="true"
-        className={`flex items-center justify-center gap-2 ${variant.padding} ${inverted ? "bg-stone-100 text-black" : "bg-transparent text-white"} transition-all delay-100 duration-500 ease-out group-hover:-translate-y-full group-focus-visible:-translate-y-full motion-reduce:transition-none`}
+        className={`flex items-center justify-center gap-2 ${variant.padding} ${inverted ? "bg-zinc-100 text-black" : "bg-transparent text-white"} transition-all delay-100 duration-500 ease-out group-hover:-translate-y-full group-focus-visible:-translate-y-full motion-reduce:transition-none`}
       >
         {children}
       </span>
 
       <span
         aria-hidden="true"
-        className={`pointer-events-none absolute inset-0 z-10 grid translate-y-full place-items-center ${inverted ? "bg-transparent text-white" : "bg-stone-100 text-black"} transition-transform delay-150 duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-focus-visible:translate-y-0 motion-reduce:transition-none`}
+        className={`pointer-events-none absolute inset-0 z-10 grid translate-y-full place-items-center ${inverted ? "bg-transparent text-white" : "bg-zinc-100 text-black"} transition-transform delay-150 duration-700 ease-[cubic-bezier(0.22,1,0.36,1)] group-hover:translate-y-0 group-focus-visible:translate-y-0 motion-reduce:transition-none`}
       >
         <span className="flex translate-y-8 items-center justify-center gap-2 opacity-0 transition-all delay-50 duration-300 ease-out group-hover:translate-y-0 group-hover:opacity-100 group-focus-visible:translate-y-0 group-focus-visible:opacity-100 motion-reduce:transition-none">
           {children}
