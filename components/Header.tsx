@@ -7,7 +7,7 @@ import { siGithub } from "simple-icons";
 
 export default function Header() {
   return (
-    <div className="sticky top-0 z-50">
+    <div className="fixed top-0 z-50 w-full">
       <>
         <a
           href="#"
