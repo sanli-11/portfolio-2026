@@ -2,6 +2,7 @@
 
 import { motion, useScroll, useTransform } from "motion/react";
 import { useRef } from "react";
+import CardStack from "./CardStack";
 
 export default function Projects() {
   const sectionRef = useRef<HTMLElement>(null);
@@ -42,6 +43,8 @@ export default function Projects() {
             sapien vitae pellentesque sem pretium tellus placerat in.
           </p>
         </motion.hgroup>
+
+        <CardStack />
       </div>
     </section>
   );

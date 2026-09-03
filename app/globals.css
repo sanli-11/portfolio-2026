@@ -1,71 +1,96 @@
 @import "tailwindcss";
 
 @font-face {
-  font-family: 'Gully';
-  src: url('/assets/fonts/Gully-Light.woff2') format('woff2'),
-  url('/assets/fonts/Gully-Light.woff') format('woff');
-  font-weight: 300;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Gully";
+    src: url("/assets/fonts/Gully-Light.woff2") format("woff2"),
+    url("/assets/fonts/Gully-Light.woff") format("woff");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gully';
-  src: url('/assets/fonts/Gully-Regular.woff2') format('woff2'),
-  url('/assets/fonts/Gully-Regular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Gully";
+    src: url("/assets/fonts/Gully-Regular.woff2") format("woff2"),
+    url("/assets/fonts/Gully-Regular.woff") format("woff");
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gully';
-  src: url('/assets/fonts/Gully-Medium.woff2') format('woff2'),
-  url('/assets/fonts/Gully-Medium.woff') format('woff');
-  font-weight: 500;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Gully";
+    src: url("/assets/fonts/Gully-Medium.woff2") format("woff2"),
+    url("/assets/fonts/Gully-Medium.woff") format("woff");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gully';
-  src: url('/assets/fonts/Gully-SemiBold.woff2') format('woff2'),
-  url('/assets/fonts/Gully-SemiBold.woff') format('woff');
-  font-weight: 600;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Gully";
+    src: url("/assets/fonts/Gully-SemiBold.woff2") format("woff2"),
+    url("/assets/fonts/Gully-SemiBold.woff") format("woff");
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
-  font-family: 'Gully';
-  src: url('/assets/fonts/Gully-Bold.woff2') format('woff2'),
-  url('/assets/fonts/Gully-Bold.woff') format('woff');
-  font-weight: bold;
-  font-style: normal;
-  font-display: swap;
+    font-family: "Gully";
+    src: url("/assets/fonts/Gully-Bold.woff2") format("woff2"),
+    url("/assets/fonts/Gully-Bold.woff") format("woff");
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
 }
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+    --background: #ffffff;
+    --foreground: #171717;
 }
 
 @theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+    --color-background: var(--background);
+    --color-foreground: var(--foreground);
+    --font-sans: var(--font-geist-sans);
+    --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+    :root {
+        --background: #0a0a0a;
+        --foreground: #ededed;
+    }
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Gully, Arial, Helvetica, sans-serif;
+    background: var(--background);
+    color: var(--foreground);
+    font-family: Gully, Arial, Helvetica, sans-serif;
+}
+
+.card-stack-card {
+    --card-progress: 0;
+    --newer-entered: 0;
+    --peel-y-px: 0px;
+    --peel-progress: 0;
+    --blur-px: 0px;
+
+    --stack-y: calc(900px - (850px * var(--card-progress)));
+    --stack-z: calc(400px - (400px * var(--card-progress)));
+    --stack-rotate: calc(45deg - (45deg * var(--card-progress)));
+
+    --folder-shift-y: calc(var(--newer-entered) * -10%);
+    --folder-scale: calc(1 - (var(--newer-entered) * 0.1));
+
+    --peel-scale: calc(1 - (var(--peel-progress) * 0.04));
+
+    transform: translate3d(
+            0px,
+            calc(var(--stack-y) + var(--folder-shift-y) + var(--peel-y-px)),
+            var(--stack-z)
+    ) rotateX(var(--stack-rotate)) scale(calc(var(--folder-scale) * var(--peel-scale)));
+
+    filter: blur(var(--blur-px));
 }
