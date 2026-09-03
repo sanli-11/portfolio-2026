@@ -7,7 +7,7 @@ import { siGithub } from "simple-icons";
 
 export default function Header() {
   return (
-    <div className="relative z-10">
+    <div className="sticky top-0 z-50">
       <>
         <a
           href="#"
@@ -21,7 +21,12 @@ export default function Header() {
             href="/"
             className="group grid size-8 place-content-center rounded-md bg-stone-100"
           >
-            <Slash color="black" size={18} strokeWidth={5} />
+            <Slash
+              color="black"
+              size={18}
+              strokeWidth={5}
+              className="transition-colors duration-300 group-hover:stroke-amber-400 group-focus-visible:stroke-amber-400"
+            />
           </Link>
 
           <nav className="flex items-center justify-end gap-6">

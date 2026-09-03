@@ -43,17 +43,17 @@ export default function Hero() {
           <p>
             <span>Lorem ipsum dolor</span>
 
-            <span className="before:mx-2 before:text-red-400 before:content-['·']">
+            <span className="before:mx-2 before:text-amber-600 before:content-['·']">
               sit amet, consectetur
             </span>
 
-            <span className="before:mx-2 before:text-red-400 before:content-['·']">
+            <span className="before:mx-2 before:text-amber-600 before:content-['·']">
               adipiscing elit
             </span>
           </p>
 
-          <h1 className="text-9xl/[7rem]">
-            Duis aute irure dolor in reprehenderit in voluptate velit
+          <h1 className="mx-auto max-w-3xl text-9xl/27">
+            Duis aute irure dolor in reprehender in voluptate velit
           </h1>
 
           <p className="mx-auto max-w-xl">
