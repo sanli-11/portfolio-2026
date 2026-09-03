@@ -143,17 +143,17 @@ export default function CardStack() {
   return (
     <section ref={sectionRef} className="absolute top-0 z-20 h-[400vh] w-full">
       <div className="sticky top-0 grid h-dvh place-content-center overflow-hidden">
-        <div className="relative aspect-3/4 h-100 w-3xl perspective-distant">
+        <div className="relative aspect-4/3 w-3xl perspective-distant">
           {cards.map((card, index) => (
             <article
               key={card.id}
               ref={(element) => (cardsRef.current[index] = element)}
               style={{ zIndex: index + 1 }}
-              className="card-stack-card absolute inset-0 grid origin-center grid-rows-3 gap-6 rounded-md bg-zinc-900 p-8 text-white will-change-transform transform-3d"
+              className="card-stack-card absolute inset-0 grid origin-center grid-rows-4 gap-6 rounded-3xl bg-zinc-900 p-6 text-white will-change-transform transform-3d"
             >
-              <section className="row-span-2 flex w-full items-center justify-between">
-                <h3 className="text-4xl">{card.domain}</h3>
-                <div className="size-full rounded-md bg-amber-400" />
+              <section className="row-span-3 flex w-full items-center justify-between">
+                <h3 className="max-w-36 text-4xl">{card.domain}</h3>
+                <div className="size-full rounded-lg" />
               </section>
 
               <hgroup className="grid gap-4">
