@@ -27,7 +27,7 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="bg-background mx-auto grid max-h-screen min-h-screen w-full max-w-450 place-content-center gap-6 py-32"
+      className="bg-background mx-auto grid max-h-screen w-full max-w-450 place-content-center gap-6 pt-32"
     >
       <div className="grid grid-cols-7 gap-6">
         <div className="col-span-4 overflow-hidden rounded-3xl bg-zinc-900"></div>
