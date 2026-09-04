@@ -7,6 +7,10 @@ const sizeVariants = {
     container: "min-w-8 max-h-10",
     padding: "px-3 py-2",
   },
+  tiny: {
+    container: "min-w-8 max-h-8",
+    padding: "px-3 py-1",
+  },
   small: {
     container: "min-w-16 max-h-10",
     padding: "px-8 py-2",
