@@ -1,3 +1,5 @@
+import AnimatedAnchor from "@/components/AnimatedAnchor";
+
 const tiles = [
   {
     id: 0,
@@ -39,6 +41,28 @@ export default function Gallery() {
               Donec rhoncus eros lobortis nulla molestie mattis scelerisque.
             </p>
           </hgroup>
+        </div>
+      </div>
+
+      <div className="grid grid-cols-6 gap-6">
+        <div className="grid size-full place-content-center rounded-3xl bg-zinc-900">
+          <AnimatedAnchor href="#" size="large">
+            Go To Page
+          </AnimatedAnchor>
+        </div>
+
+        <div className="col-span-5 grid size-full grid-flow-col place-content-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 p-12">
+          <div className="grid size-full max-w-48 content-center justify-items-start gap-4">
+            <hgroup className="grid gap-2">
+              <h4 className="text-xl">Bibendum egestas</h4>
+              <p className="text-sm text-pretty">
+                Iaculis massa nisl lacinia integer
+              </p>
+            </hgroup>
+            <AnimatedAnchor href="#" size="tiny">
+              Donec rhoncus
+            </AnimatedAnchor>
+          </div>
         </div>
       </div>
     </section>
