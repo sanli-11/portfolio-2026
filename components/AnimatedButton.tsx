@@ -1,6 +1,6 @@
 "use client";
 
-import type { AnchorHTMLAttributes } from "react";
+import type { ButtonHTMLAttributes } from "react";
 
 const sizeVariants = {
   icon: {
@@ -25,25 +25,25 @@ const sizeVariants = {
   },
 } as const;
 
-interface AnimatedAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+interface AnimatedButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   size?: keyof typeof sizeVariants;
   inverted?: boolean;
 }
 
-export default function AnimatedAnchor({
+export default function AnimatedButton({
   size = "medium",
-  href = "#",
   inverted = false,
   className = "",
+  type = "button",
   children,
   ...props
-}: AnimatedAnchorProps) {
+}: AnimatedButtonProps) {
   const variant = sizeVariants[size];
 
   return (
-    <a
-      href={href}
-      className={`group relative isolate grid overflow-hidden rounded-md border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
+    <button
+      type={type}
+      className={`group relative isolate grid overflow-hidden rounded-full border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
       {...props}
     >
       <span
@@ -63,6 +63,6 @@ export default function AnimatedAnchor({
       </span>
 
       <span className="sr-only">{children}</span>
-    </a>
+    </button>
   );
 }
