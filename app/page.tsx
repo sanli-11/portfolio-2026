@@ -3,6 +3,7 @@ import Hero from "@/components/Hero";
 import Projects from "@/components/Projects";
 import Gallery from "@/components/Gallery";
 import Lure from "@/components/Lure";
+import Footer from "@/components/Footer";
 
 export default function Home() {
   return (
@@ -13,6 +14,7 @@ export default function Home() {
         <Projects />
         <Gallery />
         <Lure />
+        <Footer />
       </div>
     </div>
   );
