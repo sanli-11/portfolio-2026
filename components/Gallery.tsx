@@ -63,6 +63,29 @@ export default function Gallery() {
               Donec rhoncus
             </AnimatedAnchor>
           </div>
+
+          <div className="grid size-full grid-cols-4 justify-items-start gap-6">
+            {tiles.map((tile) => (
+              <div
+                key={tile.id}
+                className="size-full min-h-35 min-w-70 rounded-3xl bg-zinc-800 p-4"
+              >
+                <div className="grid size-full place-content-between gap-2">
+                  <span className="ml-2 text-pretty">{tile.title}</span>
+                  <div className="flex w-full items-center justify-start gap-2">
+                    {tile.pills.map((pill, index) => (
+                      <span
+                        key={index}
+                        className="rounded-full bg-zinc-600 px-3 py-0.5 text-sm"
+                      >
+                        {pill}
+                      </span>
+                    ))}
+                  </div>
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </section>
