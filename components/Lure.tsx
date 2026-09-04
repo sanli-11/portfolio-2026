@@ -27,13 +27,13 @@ export default function Lure() {
     <section
       ref={sectionRef}
       id="lure"
-      className="bg-background relative min-h-[150dvh] w-full"
+      className="bg-background relative min-h-[150dvh] w-full overflow-clip"
     >
-      <div className="sticky top-0 h-dvh overflow-hidden">
+      <div className="sticky top-0 z-10 h-dvh">
         <motion.div style={{ y }} className="flex w-full justify-center">
           <motion.p
             style={{ scale }}
-            className="mx-auto max-w-2xl origin-top text-center text-8xl/24"
+            className="origin-top text-center text-4xl leading-tight font-medium md:text-6xl lg:text-8xl"
           >
             Pharetra vestibulum fusce dictum.
           </motion.p>
