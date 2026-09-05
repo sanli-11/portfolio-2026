@@ -26,11 +26,13 @@ const sizeVariants = {
 } as const;
 
 interface AnimatedAnchorProps extends AnchorHTMLAttributes<HTMLAnchorElement> {
+  shape?: "circle" | "square";
   size?: keyof typeof sizeVariants;
   inverted?: boolean;
 }
 
 export default function AnimatedAnchor({
+  shape = "square",
   size = "medium",
   href = "#",
   inverted = false,
@@ -43,7 +45,7 @@ export default function AnimatedAnchor({
   return (
     <a
       href={href}
-      className={`group relative isolate grid overflow-hidden rounded-md border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
+      className={`group relative isolate grid overflow-hidden ${shape === "square" ? "rounded-md" : "rounded-full"} border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
       {...props}
     >
       <span
