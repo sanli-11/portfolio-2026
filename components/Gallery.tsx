@@ -4,7 +4,7 @@ const tiles = [
   {
     id: 0,
     title: "Hands-off strategy execution with instant risk checks.",
-    pills: ["Algo Trading", "API Integration"],
+    pills: ["Algo Trading", "API"],
   },
   {
     id: 1,
@@ -27,14 +27,14 @@ export default function Gallery() {
   return (
     <section
       id="gallery"
-      className="bg-background mx-auto grid max-h-screen w-full max-w-450 place-content-center gap-6 pt-32"
+      className="bg-background mx-auto grid w-full max-w-450 place-content-center gap-6 pt-32"
     >
-      <div className="grid grid-cols-7 gap-6">
-        <div className="col-span-4 overflow-hidden rounded-3xl bg-zinc-900"></div>
+      <div className="grid gap-6 max-lg:grid-rows-3 lg:grid-cols-7">
+        <div className="overflow-hidden rounded-3xl bg-zinc-900 max-lg:row-span-2 lg:col-span-4"></div>
 
-        <div className="col-span-3 overflow-hidden rounded-3xl bg-zinc-100 text-black">
-          <hgroup className="grid place-content-center gap-8 px-32 py-36">
-            <h2 className="text-7xl/21">
+        <div className="overflow-hidden rounded-3xl bg-zinc-100 text-black lg:col-span-3">
+          <hgroup className="grid place-content-center gap-8 p-16 lg:px-16 lg:py-28 xl:px-24 2xl:px-32 2xl:py-36">
+            <h2 className="text-5xl/13 lg:text-6xl/18 2xl:text-7xl/21">
               Complex algorithms simplified into an intuitive visual console.
             </h2>
             <p className="before:mr-2 before:content-['—']">
@@ -44,12 +44,12 @@ export default function Gallery() {
         </div>
       </div>
 
-      <div className="grid grid-cols-6 gap-6">
-        <div className="grid size-full place-content-center rounded-3xl bg-zinc-900"></div>
+      <div className="grid gap-6 lg:grid-cols-4 xl:grid-cols-5">
+        <div className="hidden size-full place-content-center rounded-3xl bg-zinc-900 lg:grid"></div>
 
-        <div className="col-span-5 grid size-full grid-flow-col place-content-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 p-12">
-          <div className="grid size-full max-w-48 content-center justify-items-start gap-4">
-            <hgroup className="grid gap-2">
+        <div className="col-span-3 flex size-full flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 p-12 xl:col-span-4">
+          <div className="flex size-full items-start justify-between gap-4">
+            <hgroup className="grid gap-1">
               <h4 className="text-xl">TradingBot Max</h4>
               <p className="text-sm text-pretty">Full-Stack Algorithmic Tool</p>
             </hgroup>
@@ -58,19 +58,21 @@ export default function Gallery() {
             </AnimatedAnchor>
           </div>
 
-          <div className="grid size-full grid-cols-4 justify-items-start gap-6">
+          <div className="grid size-full grid-cols-1 justify-items-start gap-6 md:grid-cols-2 lg:grid-cols-1 xl:grid-cols-2 2xl:grid-cols-4">
             {tiles.map((tile) => (
               <div
                 key={tile.id}
-                className="size-full min-h-35 min-w-70 rounded-3xl bg-zinc-800 p-4"
+                className="pointer-events-none size-full rounded-3xl bg-zinc-800 p-4"
               >
-                <div className="grid size-full place-content-between gap-2">
-                  <span className="ml-2 text-pretty">{tile.title}</span>
+                <div className="grid size-full grid-flow-row place-content-between gap-8 lg:grid-flow-col xl:grid-flow-row xl:gap-2">
+                  <span className="ml-2 w-full text-pretty 2xl:max-w-60">
+                    {tile.title}
+                  </span>
                   <div className="flex w-full items-center justify-start gap-2">
                     {tile.pills.map((pill, index) => (
                       <span
                         key={index}
-                        className="rounded-full bg-zinc-600 px-3 py-0.5 text-sm"
+                        className="rounded-full bg-zinc-600 px-3 py-0.5 text-sm text-nowrap"
                       >
                         {pill}
                       </span>

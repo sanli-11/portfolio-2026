@@ -16,10 +16,10 @@ export default function Header() {
           Skip to content
         </a>
 
-        <header className="mx-auto flex max-w-450 items-center justify-between px-4 pt-12">
+        <header className="mx-auto flex w-full max-w-450 items-center justify-between px-4 pt-12">
           <Link
             href="/"
-            className="group grid size-8 place-content-center rounded-md bg-zinc-100"
+            className="group ml-8 grid size-8 place-content-center rounded-md bg-zinc-100"
           >
             <Slash
               color="black"
@@ -29,7 +29,7 @@ export default function Header() {
             />
           </Link>
 
-          <nav className="flex items-center justify-end gap-6">
+          <nav className="flex items-center justify-end-safe gap-6">
             <AnimatedAnchor size="small" href="#works">
               Works
             </AnimatedAnchor>
@@ -52,7 +52,7 @@ export default function Header() {
         </header>
       </>
 
-      <nav className="fixed top-1/2 right-0 translate-x-24 -translate-y-1/2">
+      <nav className="fixed top-1/2 right-0 translate-x-14 -translate-y-1/2 lg:translate-x-24">
         <AnimatedAnchor
           inverted
           size="large"

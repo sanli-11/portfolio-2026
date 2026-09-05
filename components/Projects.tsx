@@ -32,11 +32,11 @@ export default function Projects() {
             style={{ scale, opacity }}
             className="grid gap-6 text-center"
           >
-            <h2 className="mx-auto max-w-2xl text-7xl/21">
+            <h2 className="mx-auto max-w-md text-5xl/15 lg:max-w-2xl lg:text-6xl/18 2xl:text-7xl/21">
               Turning Ideas Into Working Products
             </h2>
 
-            <p className="mx-auto max-w-sm">
+            <p className="mx-auto max-w-xs lg:max-w-sm">
               Showcasing end-to-end development, from initial architecture and
               API design to polished UI performance.
             </p>

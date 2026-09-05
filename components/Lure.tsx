@@ -35,7 +35,7 @@ export default function Lure() {
         <motion.div style={{ y }} className="grid place-items-center gap-6">
           <motion.p
             style={{ scale }}
-            className="max-w-3xl origin-top text-center text-8xl/24"
+            className="max-w-110 origin-top text-center text-5xl/13 lg:max-w-150 lg:text-6xl/18 2xl:max-w-3xl 2xl:text-7xl/21"
           >
             Ready to turn your idea into reality?
           </motion.p>

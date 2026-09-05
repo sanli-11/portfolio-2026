@@ -16,12 +16,12 @@ export default function Footer() {
           <DottedBackground />
         </div>
 
-        <section className="absolute bottom-0 z-10 mb-24 flex w-full items-end justify-start gap-6 px-20">
-          <h2 className="max-w-180 text-8xl/24 text-pretty">
+        <section className="absolute bottom-0 z-10 mb-24 flex w-full flex-col items-start justify-start gap-6 px-20 lg:flex-row lg:items-end">
+          <h2 className="text-6xl/18 text-pretty lg:max-w-130 lg:text-7xl/21 2xl:max-w-170 2xl:text-8xl/24">
             Available for select projects
           </h2>
 
-          <div className="mb-6 flex items-center justify-evenly gap-8">
+          <div className="mb-6 flex items-center gap-8">
             <AnimatedButton onClick={() => setIsDialogOpen(true)} size="large">
               Start the Conversation
             </AnimatedButton>

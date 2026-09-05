@@ -155,8 +155,8 @@ export default function CardStack({ parentRef }: CardStackProps) {
 
   return (
     <div className="pointer-events-none absolute inset-0 z-20">
-      <div className="sticky top-0 grid h-dvh w-full place-content-center">
-        <div className="relative aspect-4/3 w-3xl perspective-distant">
+      <div className="sticky top-0 grid h-dvh w-full max-w-dvw place-content-center overflow-hidden">
+        <div className="relative aspect-4/3 w-xl perspective-distant lg:w-3xl">
           {cards.map((card, index) => (
             <article
               key={card.id}
@@ -165,13 +165,15 @@ export default function CardStack({ parentRef }: CardStackProps) {
               className="card-stack-card absolute inset-0 grid origin-center grid-rows-4 gap-6 rounded-3xl bg-zinc-900 p-6 text-white will-change-transform transform-3d"
             >
               <section className="row-span-3 flex w-full items-center justify-between">
-                <h3 className="max-w-36 text-4xl">{card.domain}</h3>
+                <h3 className="max-w-36 text-xl lg:text-2xl 2xl:text-3xl">
+                  {card.domain}
+                </h3>
                 <div className="size-full rounded-lg" />
               </section>
 
-              <hgroup className="grid gap-4">
-                <div className="flex w-full items-start justify-between">
-                  <h2 className="text-5xl font-medium tracking-tight">
+              <hgroup className="grid content-end gap-4 lg:gap-2 2xl:gap-4">
+                <div className="flex w-full items-end justify-between lg:items-start">
+                  <h2 className="text-2xl tracking-tight lg:text-3xl 2xl:text-4xl">
                     {card.title}
                   </h2>
 
