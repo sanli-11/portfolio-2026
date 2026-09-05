@@ -90,6 +90,44 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                 <X size={24} />
               </AnimatedButton>
             </div>
+
+            <motion.div
+              className="items-top mx-auto flex size-full max-w-275 origin-top items-center justify-center gap-6"
+              variants={{
+                closed: { scaleY: 0, opacity: 0 },
+                open: {
+                  scaleY: 1,
+                  opacity: 1,
+                  transition: {
+                    delay: 0.7,
+                    scaleY: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
+                    opacity: { duration: 0.25, ease: "easeOut" },
+                  },
+                },
+              }}
+            >
+              <hgroup className="grid max-w-90 content-start gap-6">
+                <h2
+                  id="contact-dialog-title"
+                  className="h-fit rounded-3xl bg-zinc-900 p-12 text-4xl"
+                >
+                  Start a project
+                </h2>
+
+                <div className="grid h-fit gap-4 rounded-3xl bg-zinc-900 p-12">
+                  <p>
+                    Ornare sagittis vehicula praesent dui felis venenatis
+                    ultrices.
+                  </p>
+                  <p>Lorem ipsum dolor sit amet consectetur adipiscing elit.</p>
+                  <p>
+                    Pharetra vestibulum fusce dictum risus blandit quis
+                    suspendisse.
+                  </p>
+                  <p>Himenaeos orci</p>
+                </div>
+              </hgroup>
+            </motion.div>
           </motion.section>
         </motion.div>
       )}
