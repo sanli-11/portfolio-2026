@@ -15,7 +15,7 @@ export default function Lure() {
   const rawY = useTransform(
     scrollYProgress,
     [0, 0.08, 0.2, 0.55, 0.3],
-    ["-10vh", "0vh", "35vh", "40vh", "80vh"],
+    ["-5vh", "0vh", "35vh", "40vh", "80vh"],
   );
   const y = useSpring(rawY, {
     stiffness: 180,
