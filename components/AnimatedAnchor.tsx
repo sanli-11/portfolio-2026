@@ -12,15 +12,15 @@ const sizeVariants = {
     padding: "px-3 py-1",
   },
   small: {
-    container: "min-w-16 max-h-10",
+    container: "min-w-32 max-h-10",
     padding: "px-8 py-2",
   },
   medium: {
-    container: "min-w-24 max-h-12",
+    container: "min-w-36 max-h-12",
     padding: "px-10 py-3",
   },
   large: {
-    container: "min-w-32 max-h-16",
+    container: "min-w-40 max-h-16",
     padding: "px-12 py-4",
   },
 } as const;
