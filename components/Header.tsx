@@ -10,7 +10,7 @@ export default function Header() {
     <div className="fixed top-0 z-50 w-full">
       <>
         <a
-          href="#"
+          href="#main"
           className="fixed -top-16 rounded-br-md bg-zinc-400 px-6 py-2.5 text-black outline-offset-4 outline-amber-400 transition-discrete duration-600 hover:top-0 hover:outline-2 focus:outline-2 focus-visible:top-0"
         >
           Skip to content
@@ -30,11 +30,8 @@ export default function Header() {
           </Link>
 
           <nav className="flex items-center justify-end gap-6">
-            <AnimatedAnchor size="small" href="#about">
-              About
-            </AnimatedAnchor>
-            <AnimatedAnchor size="small" href="#projects">
-              Projects
+            <AnimatedAnchor size="small" href="#works">
+              Works
             </AnimatedAnchor>
             <AnimatedAnchor size="small" href="#contact">
               Contact

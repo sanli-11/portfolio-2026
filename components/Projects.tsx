@@ -23,7 +23,7 @@ export default function Projects() {
   return (
     <section
       ref={sectionRef}
-      id="projects"
+      id="works"
       className="bg-background relative w-full text-white"
     >
       <div className="relative h-[400vh] w-full">

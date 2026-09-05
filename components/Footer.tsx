@@ -11,7 +11,7 @@ export default function Footer() {
 
   {
     return (
-      <footer id="footer" className="relative mb-4 h-[50dvh] w-full">
+      <footer id="contact" className="relative mb-4 h-[50dvh] w-full">
         <div className="size-full overflow-hidden rounded-3xl">
           <DottedBackground />
         </div>

@@ -9,13 +9,13 @@ export default function Home() {
   return (
     <div className="relative min-h-screen w-full scroll-smooth">
       <Header />
-      <div className="px-4">
+      <main id="main" className="px-4">
         <Hero />
         <Projects />
         <Gallery />
         <Lure />
         <Footer />
-      </div>
+      </main>
     </div>
   );
 }
