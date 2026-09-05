@@ -27,15 +27,18 @@ export default function Projects() {
       className="bg-background relative w-full text-white"
     >
       <div className="relative h-[400vh] w-full">
-        <div className="pointer-events-none sticky top-0 z-10 grid h-dvh w-full place-content-center text-center">
-          <motion.hgroup style={{ scale, opacity }}>
+        <div className="pointer-events-none sticky top-0 z-10 grid h-dvh w-full place-content-center">
+          <motion.hgroup
+            style={{ scale, opacity }}
+            className="grid gap-6 text-center"
+          >
             <h2 className="mx-auto max-w-2xl text-7xl/21">
-              Taciti sociosqu ad litora torquent
+              Turning Ideas Into Working Products
             </h2>
 
             <p className="mx-auto max-w-sm">
-              Lorem ipsum dolor sit amet consectetur adipiscing elit. Faucibus
-              ex sapien vitae pellentesque sem pretium tellus placerat in.
+              Showcasing end-to-end development, from initial architecture and
+              API design to polished UI performance.
             </p>
           </motion.hgroup>
         </div>

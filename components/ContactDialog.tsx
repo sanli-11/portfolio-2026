@@ -184,18 +184,9 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                   </h2>
 
                   <div className="grid h-fit gap-4 rounded-3xl bg-zinc-900 p-12">
-                    <p>
-                      Ornare sagittis vehicula praesent dui felis venenatis
-                      ultrices.
-                    </p>
-                    <p>
-                      Lorem ipsum dolor sit amet consectetur adipiscing elit.
-                    </p>
-                    <p>
-                      Pharetra vestibulum fusce dictum risus blandit quis
-                      suspendisse.
-                    </p>
-                    <p>Himenaeos orci</p>
+                    <p>Leave a message and I’ll be in touch shortly.</p>
+                    <p>You can also contact me directly by email.</p>
+                    <p>Prefer instant messaging? Find me on WhatsApp.</p>
                   </div>
                 </hgroup>
 

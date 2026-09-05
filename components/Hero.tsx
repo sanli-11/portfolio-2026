@@ -24,7 +24,7 @@ export default function Hero() {
     <section
       ref={sectionRef}
       id="#"
-      className="relative -mt-16 h-[calc(100dvh-40px)] w-full overflow-hidden rounded-3xl"
+      className="relative -mt-16 h-[105dvh] w-full overflow-hidden rounded-3xl"
     >
       <motion.div
         style={{
@@ -38,27 +38,27 @@ export default function Hero() {
         </div>
       </motion.div>
 
-      <article className="absolute top-1/2 left-1/2 z-1 size-full -translate-1/2 py-64 backdrop-blur-[1px]">
-        <hgroup className="mx-auto grid size-full max-w-5xl justify-items-center gap-12 text-center">
+      <article className="absolute top-1/2 left-1/2 z-1 size-full -translate-1/2 pt-80 pb-24 backdrop-blur-[1px]">
+        <hgroup className="mx-auto grid size-full max-w-5xl content-start justify-items-center gap-12 text-center">
           <p>
-            <span>Lorem ipsum dolor</span>
+            <span>Interfaces</span>
 
-            <span className="before:mx-2 before:text-amber-600 before:content-['·']">
-              sit amet, consectetur
+            <span className="before:mx-4 before:text-amber-600 before:content-['·']">
+              APIs
             </span>
 
-            <span className="before:mx-2 before:text-amber-600 before:content-['·']">
-              adipiscing elit
+            <span className="before:mx-4 before:text-amber-600 before:content-['·']">
+              Systems
             </span>
           </p>
 
-          <h1 className="mx-auto max-w-3xl text-9xl/27">
-            Duis aute irure dolor in reprehender in voluptate velit
+          <h1 className="mx-auto grid max-w-3xl text-9xl/tight tracking-tight">
+            You bring the problem. I&#39;ll build the solution.
           </h1>
 
-          <p className="mx-auto max-w-xl">
-            Excepteur sint occaecat cupidatat non proident, sunt in culpa qui
-            officia deserunt
+          <p className="mx-auto mt-40 max-w-xl">
+            Partnering with teams and founders to ship production-ready web
+            applications built to scale.
           </p>
         </hgroup>
       </article>

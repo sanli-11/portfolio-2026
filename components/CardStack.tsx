@@ -5,29 +5,31 @@ import { RefObject, useEffect, useRef } from "react";
 const cards = [
   {
     id: 0,
-    title: "Lorem ipsum dolor",
+    title: "TradingBot Max",
     description:
-      "Turpis fames primis vulputate ornare sagittis vehicula praesent.",
-    domain: "lorem ipsum",
+      "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
+    domain: "Algorithmic Trading",
   },
   {
     id: 1,
-    title: "Cursus mi pretium",
+    title: "TradingBot Max",
     description:
-      "Ultricies habitant morbi senectus netus suscipit auctor curabitur.",
-    domain: "lorem ipsum",
+      "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
+    domain: "Algorithmic Trading",
   },
   {
     id: 2,
-    title: "Aenean sed diam urna",
-    description: "Amet consectetur adipiscing elit quisque faucibus ex sapien.",
-    domain: "lorem ipsum",
+    title: "TradingBot Max",
+    description:
+      "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
+    domain: "Algorithmic Trading",
   },
   {
     id: 3,
-    title: "Integer nunc posuere",
-    description: "Nostra inceptos himenaeos orci varius natoque penatibus et.",
-    domain: "lorem ipsum",
+    title: "TradingBot Max",
+    description:
+      "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
+    domain: "Algorithmic Trading",
   },
 ];
 

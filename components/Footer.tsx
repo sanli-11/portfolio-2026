@@ -17,13 +17,13 @@ export default function Footer() {
         </div>
 
         <section className="absolute bottom-0 z-10 mb-24 flex w-full items-end justify-start gap-6 px-20">
-          <h2 className="max-w-250 text-9xl/27 text-pretty">
-            Duis irure dolor reprehender in
+          <h2 className="max-w-180 text-8xl/24 text-pretty">
+            Available for select projects
           </h2>
 
           <div className="mb-6 flex items-center justify-evenly gap-8">
             <AnimatedButton onClick={() => setIsDialogOpen(true)} size="large">
-              Interdum tortor
+              Start the Conversation
             </AnimatedButton>
           </div>
         </section>

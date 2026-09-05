@@ -33,9 +33,9 @@ export default function Lure() {
         <motion.div style={{ y }} className="flex w-full justify-center">
           <motion.p
             style={{ scale }}
-            className="origin-top text-center text-4xl leading-tight font-medium md:text-6xl lg:text-8xl"
+            className="max-w-3xl origin-top text-center text-8xl/24"
           >
-            Pharetra vestibulum fusce dictum.
+            Ready to turn your idea into reality?
           </motion.p>
         </motion.div>
       </div>
