@@ -1,6 +1,8 @@
 "use client";
 
 import { RefObject, useEffect, useRef } from "react";
+import { SquareArrowUpRight } from "lucide-react";
+import AnimatedAnchor from "@/components/AnimatedAnchor";
 
 const cards = [
   {
@@ -9,6 +11,7 @@ const cards = [
     description:
       "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
     domain: "Algorithmic Trading",
+    link: "https://github.com/sanli-11/",
   },
   {
     id: 1,
@@ -16,6 +19,7 @@ const cards = [
     description:
       "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
     domain: "Algorithmic Trading",
+    link: "https://github.com/sanli-11/",
   },
   {
     id: 2,
@@ -23,6 +27,7 @@ const cards = [
     description:
       "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
     domain: "Algorithmic Trading",
+    link: "https://github.com/sanli-11/",
   },
   {
     id: 3,
@@ -30,6 +35,7 @@ const cards = [
     description:
       "A full-stack, scalable dashboard for real-time market tracking and risk metrics.",
     domain: "Algorithmic Trading",
+    link: "https://github.com/sanli-11/",
   },
 ];
 
@@ -164,9 +170,21 @@ export default function CardStack({ parentRef }: CardStackProps) {
               </section>
 
               <hgroup className="grid gap-4">
-                <h2 className="text-5xl font-medium tracking-tight">
-                  {card.title}
-                </h2>
+                <div className="flex w-full items-start justify-between">
+                  <h2 className="text-5xl font-medium tracking-tight">
+                    {card.title}
+                  </h2>
+
+                  <AnimatedAnchor
+                    size="icon"
+                    href={card.link}
+                    className="pointer-events-auto flex gap-2"
+                  >
+                    <span className="sr-only">Visit Page</span>
+                    <SquareArrowUpRight />
+                  </AnimatedAnchor>
+                </div>
+
                 <p>{card.description}</p>
               </hgroup>
             </article>

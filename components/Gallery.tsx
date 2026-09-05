@@ -53,7 +53,7 @@ export default function Gallery() {
               <h4 className="text-xl">TradingBot Max</h4>
               <p className="text-sm text-pretty">Full-Stack Algorithmic Tool</p>
             </hgroup>
-            <AnimatedAnchor href="#" size="tiny">
+            <AnimatedAnchor href="https://github.com/sanli-11" size="tiny">
               View Project
             </AnimatedAnchor>
           </div>
