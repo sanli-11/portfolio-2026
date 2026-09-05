@@ -26,11 +26,13 @@ const sizeVariants = {
 } as const;
 
 interface AnimatedButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  shape?: "circle" | "square";
   size?: keyof typeof sizeVariants;
   inverted?: boolean;
 }
 
 export default function AnimatedButton({
+  shape = "circle",
   size = "medium",
   inverted = false,
   className = "",
@@ -43,7 +45,7 @@ export default function AnimatedButton({
   return (
     <button
       type={type}
-      className={`group relative isolate grid overflow-hidden rounded-full border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
+      className={`group relative isolate grid overflow-hidden ${shape === "circle" ? "rounded-full" : "rounded-md"} border ${inverted ? "border-zinc-900 hover:border-zinc-100" : "border-zinc-100 hover:border-zinc-900"} ${variant.container} transition-colors delay-100 ${className}`}
       {...props}
     >
       <span
