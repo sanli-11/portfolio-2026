@@ -45,6 +45,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
           ? document.activeElement
           : null;
 
+      document.documentElement.style.scrollbarGutter = "stable";
       document.body.style.overflow = "hidden";
 
       const handleKeyDown = (event: KeyboardEvent) => {
@@ -58,20 +59,25 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
 
       return () => {
         document.body.style.overflow = "";
+        document.documentElement.style.scrollbarGutter = "";
         document.removeEventListener("keydown", handleKeyDown);
       };
     }
 
     document.body.style.overflow = "";
+    document.documentElement.style.scrollbarGutter = "";
 
     const element = previouslyFocusedElement.current;
 
-    if (element && document.contains(element)) element.focus();
+    if (element && document.contains(element)) {
+      element.focus();
+    }
 
     previouslyFocusedElement.current = null;
 
     return () => {
       document.body.style.overflow = "";
+      document.documentElement.style.scrollbarGutter = "";
     };
   }, [open, onClose]);
 
@@ -112,7 +118,9 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
             aria-labelledby="contact-dialog-title"
             className="bg-background absolute inset-0 size-full overflow-x-hidden overflow-y-auto px-24 py-12"
             variants={{
-              closed: { y: "100%" },
+              closed: {
+                y: "100%",
+              },
               open: {
                 y: 0,
                 transition: {
@@ -123,6 +131,12 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                   mass: 0.9,
                 },
               },
+            }}
+            transition={{
+              type: "spring",
+              stiffness: 100,
+              damping: 28,
+              mass: 0.9,
             }}
           >
             <div className="absolute top-16 right-24">
@@ -140,14 +154,23 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
               <motion.div
                 className="mx-auto flex w-full max-w-360 origin-top items-start justify-center gap-6"
                 variants={{
-                  closed: { scaleY: 0, opacity: 0 },
+                  closed: {
+                    scaleY: 0,
+                    opacity: 0,
+                  },
                   open: {
                     scaleY: 1,
                     opacity: 1,
                     transition: {
                       delay: 0.7,
-                      scaleY: { duration: 0.55, ease: [0.22, 1, 0.36, 1] },
-                      opacity: { duration: 0.25, ease: "easeOut" },
+                      scaleY: {
+                        duration: 0.55,
+                        ease: [0.22, 1, 0.36, 1],
+                      },
+                      opacity: {
+                        duration: 0.25,
+                        ease: "easeOut",
+                      },
                     },
                   },
                 }}
