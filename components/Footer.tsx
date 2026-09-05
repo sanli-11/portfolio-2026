@@ -1,8 +1,14 @@
+"use client";
+
+import { useState } from "react";
 import DottedBackground from "@/components/DottedBackground";
 import { Mail } from "lucide-react";
-import AnimatedAnchor from "@/components/AnimatedAnchor";
+import ContactDialog from "@/components/ContactDialog";
+import AnimatedButton from "@/components/AnimatedButton";
 
 export default function Footer() {
+  const [isDialogOpen, setIsDialogOpen] = useState(false);
+
   {
     return (
       <footer id="footer" className="relative mb-4 h-[50dvh] w-full">
@@ -16,13 +22,9 @@ export default function Footer() {
           </h2>
 
           <div className="mb-6 flex items-center justify-evenly gap-8">
-            <AnimatedAnchor
-              href="mailto:sanli.has11@gmail.com"
-              shape="rounded"
-              size="large"
-            >
+            <AnimatedButton onClick={() => setIsDialogOpen(true)} size="large">
               Interdum tortor
-            </AnimatedAnchor>
+            </AnimatedButton>
           </div>
         </section>
 
@@ -34,6 +36,11 @@ export default function Footer() {
             <Mail size={16} />
             sanli.has11@gmail.com
           </a>
+
+          <ContactDialog
+            open={isDialogOpen}
+            onClose={() => setIsDialogOpen(false)}
+          />
         </section>
       </footer>
     );
