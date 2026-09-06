@@ -30,7 +30,7 @@ export default function Gallery() {
       id="gallery"
       className="bg-background mx-auto grid w-full max-w-450 place-content-center gap-6 pt-32"
     >
-      <div className="grid grid-rows-2 gap-6 sm:grid-rows-3 lg:grid-cols-7">
+      <div className="grid grid-rows-2 gap-6 sm:grid-rows-3 lg:grid-cols-7 lg:grid-rows-none">
         <div className="overflow-hidden rounded-3xl bg-zinc-900 sm:row-span-2 lg:col-span-4"></div>
 
         <div className="overflow-hidden rounded-3xl bg-zinc-100 text-black lg:col-span-3">
