@@ -227,13 +227,13 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                   noValidate
                   className="grid w-full gap-6 rounded-3xl bg-zinc-900 px-4 py-8 sm:p-12"
                 >
-                  <h4 className="flex items-center gap-2">
+                  <h3 className="flex items-center gap-2">
                     <span className="rounded-sm bg-zinc-600 px-2 py-px">1</span>
                     <div className="h-px w-full bg-zinc-600" />
                     <span className="py-0.5 tracking-tighter text-nowrap">
                       About You
                     </span>
-                  </h4>
+                  </h3>
 
                   <section className="grid gap-4 md:grid-cols-2">
                     <div className="group relative">
@@ -270,13 +270,13 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                     </div>
                   </section>
 
-                  <h4 className="mt-2 flex items-center gap-2">
+                  <h3 className="mt-2 flex items-center gap-2">
                     <span className="rounded-sm bg-zinc-600 px-2 py-px">2</span>
                     <div className="h-px w-full bg-zinc-600" />
                     <span className="py-0.5 tracking-tighter text-nowrap">
                       Your Organization
                     </span>
-                  </h4>
+                  </h3>
 
                   <section className="grid gap-4 md:grid-cols-2">
                     <div className="group relative">
@@ -312,13 +312,13 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                     </div>
                   </section>
 
-                  <h4 className="mt-2 flex items-center gap-2">
+                  <h3 className="mt-2 flex items-center gap-2">
                     <span className="rounded-sm bg-zinc-600 px-2 py-px">3</span>
                     <div className="h-px w-full bg-zinc-600" />
                     <span className="py-0.5 tracking-tighter text-nowrap">
                       Your Project
                     </span>
-                  </h4>
+                  </h3>
 
                   <Textfield
                     id="projectDetails"

@@ -51,7 +51,7 @@ export default function Gallery() {
         <div className="col-span-3 flex size-full flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 px-6 pt-6 pb-3 lg:p-12 xl:col-span-4">
           <div className="flex size-full items-center justify-between gap-4 sm:items-start">
             <hgroup className="grid gap-1">
-              <h4 className="text-xl">TradingBot Max</h4>
+              <h3 className="text-xl">TradingBot Max</h3>
               <p className="text-sm text-pretty">Full-Stack Algorithmic Tool</p>
             </hgroup>
             <AnimatedAnchor
