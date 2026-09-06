@@ -27,6 +27,7 @@ export default function Header() {
               strokeWidth={5}
               className="transition-colors duration-300 group-hover:stroke-amber-400 group-focus-visible:stroke-amber-400"
             />
+            <span className="sr-only">Home</span>
           </Link>
 
           <nav className="flex items-center justify-end-safe gap-6">
