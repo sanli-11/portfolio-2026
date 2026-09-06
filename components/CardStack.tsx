@@ -160,7 +160,9 @@ export default function CardStack({ parentRef }: CardStackProps) {
           {cards.map((card, index) => (
             <article
               key={card.id}
-              ref={(element) => (cardsRef.current[index] = element)}
+              ref={(element) => {
+                cardsRef.current[index] = element;
+              }}
               style={{ zIndex: index + 1 }}
               className="card-stack-card absolute inset-0 grid origin-center grid-rows-4 gap-6 rounded-3xl bg-zinc-900 p-6 text-white will-change-transform transform-3d"
             >
