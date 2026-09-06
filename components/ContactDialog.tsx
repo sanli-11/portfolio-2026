@@ -181,8 +181,26 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                   </h2>
 
                   <p>Leave a message and I’ll be in touch shortly.</p>
-                  <p>You can also contact me directly by email.</p>
-                  <p>Prefer instant messaging? Find me on WhatsApp.</p>
+                  <p>
+                    You can also contact me directly by{" "}
+                    <a
+                      href="mailto:sanli.has11@gmail.com"
+                      className="underline decoration-dotted underline-offset-6"
+                    >
+                      email
+                    </a>{" "}
+                    .
+                  </p>
+                  <p>
+                    Prefer instant messaging? Find me on{" "}
+                    <a
+                      href="https://wa.me/+923098193206"
+                      className="underline decoration-dotted underline-offset-6"
+                    >
+                      WhatsApp
+                    </a>
+                    .
+                  </p>
                 </hgroup>
 
                 <hgroup className="hidden max-w-90 content-start gap-6 lg:grid">
