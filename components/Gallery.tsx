@@ -1,4 +1,5 @@
 import AnimatedAnchor from "@/components/AnimatedAnchor";
+import { ArrowUpRightFromSquare } from "lucide-react";
 
 const tiles = [
   {
@@ -29,11 +30,11 @@ export default function Gallery() {
       id="gallery"
       className="bg-background mx-auto grid w-full max-w-450 place-content-center gap-6 pt-32"
     >
-      <div className="grid gap-6 max-lg:grid-rows-3 lg:grid-cols-7">
-        <div className="overflow-hidden rounded-3xl bg-zinc-900 max-lg:row-span-2 lg:col-span-4"></div>
+      <div className="grid grid-rows-2 gap-6 sm:grid-rows-3 lg:grid-cols-7">
+        <div className="overflow-hidden rounded-3xl bg-zinc-900 sm:row-span-2 lg:col-span-4"></div>
 
         <div className="overflow-hidden rounded-3xl bg-zinc-100 text-black lg:col-span-3">
-          <hgroup className="grid place-content-center gap-8 p-16 lg:px-16 lg:py-28 xl:px-24 2xl:px-32 2xl:py-36">
+          <hgroup className="grid place-content-center gap-8 px-12 py-16 lg:px-16 lg:py-28 xl:px-24 2xl:px-32 2xl:py-36">
             <h2 className="text-5xl/13 lg:text-6xl/18 2xl:text-7xl/21">
               Complex algorithms simplified into an intuitive visual console.
             </h2>
@@ -47,14 +48,19 @@ export default function Gallery() {
       <div className="grid gap-6 lg:grid-cols-4 xl:grid-cols-5">
         <div className="hidden size-full place-content-center rounded-3xl bg-zinc-900 lg:grid"></div>
 
-        <div className="col-span-3 flex size-full flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 p-12 xl:col-span-4">
-          <div className="flex size-full items-start justify-between gap-4">
+        <div className="col-span-3 flex size-full flex-col items-center justify-center gap-6 overflow-hidden rounded-3xl bg-zinc-900 px-6 pt-6 pb-3 lg:p-12 xl:col-span-4">
+          <div className="flex size-full items-center justify-between gap-4 sm:items-start">
             <hgroup className="grid gap-1">
               <h4 className="text-xl">TradingBot Max</h4>
               <p className="text-sm text-pretty">Full-Stack Algorithmic Tool</p>
             </hgroup>
-            <AnimatedAnchor href="https://github.com/sanli-11" size="tiny">
-              View Project
+            <AnimatedAnchor
+              href="https://github.com/sanli-11"
+              size="tiny"
+              className="grid content-center max-sm:border-none"
+            >
+              <span className="hidden sm:block">View Project</span>
+              <ArrowUpRightFromSquare />
             </AnimatedAnchor>
           </div>
 

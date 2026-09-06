@@ -30,7 +30,11 @@ export default function Header() {
           </Link>
 
           <nav className="flex items-center justify-end-safe gap-6">
-            <AnimatedAnchor size="small" href="#works">
+            <AnimatedAnchor
+              size="small"
+              href="#works"
+              className="hidden sm:grid"
+            >
               Works
             </AnimatedAnchor>
             <AnimatedAnchor size="small" href="#contact">
@@ -52,7 +56,7 @@ export default function Header() {
         </header>
       </>
 
-      <nav className="fixed top-1/2 right-0 translate-x-14 -translate-y-1/2 lg:translate-x-24">
+      <nav className="fixed top-3/4 right-0 translate-x-14 -translate-y-3/4 sm:top-1/2 sm:-translate-y-1/2 lg:translate-x-24">
         <AnimatedAnchor
           inverted
           size="large"

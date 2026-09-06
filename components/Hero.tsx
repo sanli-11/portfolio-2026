@@ -52,11 +52,11 @@ export default function Hero() {
             </span>
           </p>
 
-          <h1 className="mx-auto grid max-w-107 text-7xl/tight tracking-tight xl:max-w-145 xl:text-8xl/tight 2xl:max-w-3xl 2xl:text-9xl/tight">
+          <h1 className="mx-auto grid max-w-72 text-5xl/tight tracking-tight sm:max-w-107 sm:text-7xl/tight xl:max-w-145 xl:text-8xl/tight 2xl:max-w-3xl 2xl:text-9xl/tight">
             You bring the problem. I&#39;ll build the solution.
           </h1>
 
-          <p className="absolute bottom-24 left-1/2 max-w-xl -translate-x-1/2 lg:bottom-32">
+          <p className="absolute bottom-24 sm:left-1/2 sm:max-w-xl sm:-translate-x-1/2 lg:bottom-32">
             Partnering with teams and founders to ship production-ready web
             applications built to scale.
           </p>

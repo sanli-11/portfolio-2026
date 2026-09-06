@@ -16,8 +16,8 @@ export default function Footer() {
           <DottedBackground />
         </div>
 
-        <section className="absolute bottom-0 z-10 mb-24 flex w-full flex-col items-start justify-start gap-6 px-20 lg:flex-row lg:items-end">
-          <h2 className="text-6xl/18 text-pretty lg:max-w-130 lg:text-7xl/21 2xl:max-w-170 2xl:text-8xl/24">
+        <section className="absolute bottom-0 z-10 mb-12 flex w-full flex-col items-start justify-start gap-8 px-6 sm:gap-6 sm:px-10 lg:mb-24 lg:flex-row lg:items-end lg:px-20">
+          <h2 className="text-5xl/13 text-pretty sm:text-6xl/18 lg:max-w-130 lg:text-7xl/21 2xl:max-w-170 2xl:text-8xl/24">
             Available for select projects
           </h2>
 

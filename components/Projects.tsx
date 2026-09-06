@@ -32,7 +32,7 @@ export default function Projects() {
             style={{ scale, opacity }}
             className="grid gap-6 text-center"
           >
-            <h2 className="mx-auto max-w-md text-5xl/15 lg:max-w-2xl lg:text-6xl/18 2xl:text-7xl/21">
+            <h2 className="mx-auto max-w-sm text-4xl sm:text-5xl/15 lg:max-w-2xl lg:text-6xl/18 2xl:text-7xl/21">
               Turning Ideas Into Working Products
             </h2>
 
