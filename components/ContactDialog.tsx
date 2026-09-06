@@ -116,7 +116,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
             role="dialog"
             aria-modal="true"
             aria-labelledby="contact-dialog-title"
-            className="bg-background absolute inset-0 size-full overflow-x-hidden overflow-y-auto px-24 py-12"
+            className="bg-background absolute inset-0 size-full overflow-x-hidden overflow-y-auto px-0 py-12 lg:px-8 xl:px-24"
             variants={{
               closed: {
                 y: "100%",
@@ -139,7 +139,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
               mass: 0.9,
             }}
           >
-            <div className="absolute top-16 right-24">
+            <div className="absolute top-8 right-4 sm:right-8 lg:top-16 lg:right-16 xl:right-24">
               <AnimatedButton
                 shape="square"
                 size="icon"
@@ -150,9 +150,9 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
               </AnimatedButton>
             </div>
 
-            <div className="flex size-full items-center justify-center">
+            <div className="flex size-full items-center justify-center p-8">
               <motion.div
-                className="mx-auto flex w-full max-w-360 origin-top items-start justify-center gap-6"
+                className="mx-auto flex w-full max-w-360 origin-top flex-col items-start justify-center gap-6 lg:flex-row"
                 variants={{
                   closed: {
                     scaleY: 0,
@@ -175,7 +175,17 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                   },
                 }}
               >
-                <hgroup className="grid max-w-90 content-start gap-6">
+                <hgroup className="grid max-w-140 content-start gap-2 rounded-3xl bg-zinc-900 p-6 sm:p-12 lg:hidden">
+                  <h2 id="contact-dialog-title" className="mb-4 text-4xl">
+                    Start a project
+                  </h2>
+
+                  <p>Leave a message and I’ll be in touch shortly.</p>
+                  <p>You can also contact me directly by email.</p>
+                  <p>Prefer instant messaging? Find me on WhatsApp.</p>
+                </hgroup>
+
+                <hgroup className="hidden max-w-90 content-start gap-6 lg:grid">
                   <h2
                     id="contact-dialog-title"
                     className="h-fit rounded-3xl bg-zinc-900 p-12 text-4xl"
@@ -193,7 +203,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                 <form
                   onSubmit={handleSubmit}
                   noValidate
-                  className="grid w-full gap-6 rounded-3xl bg-zinc-900 p-12"
+                  className="grid w-full gap-6 rounded-3xl bg-zinc-900 px-4 py-8 sm:p-12"
                 >
                   <h4 className="flex items-center gap-2">
                     <span className="rounded-sm bg-zinc-600 px-2 py-px">1</span>
@@ -203,7 +213,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                     </span>
                   </h4>
 
-                  <section className="grid grid-cols-2 gap-4">
+                  <section className="grid gap-4 md:grid-cols-2">
                     <div className="group relative">
                       <Field
                         id="name"
@@ -246,7 +256,7 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                     </span>
                   </h4>
 
-                  <section className="grid grid-cols-2 gap-4">
+                  <section className="grid gap-4 md:grid-cols-2">
                     <div className="group relative">
                       <Field
                         id="organization"
