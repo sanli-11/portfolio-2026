@@ -42,6 +42,7 @@ export default function Lure() {
           <motion.div style={{ scale }}>
             <AnimatedAnchor shape="circle" size="large" href="#contact">
               <ArrowDown />
+              <span className="sr-only">Contact now</span>
             </AnimatedAnchor>
           </motion.div>
         </motion.div>
