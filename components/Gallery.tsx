@@ -61,6 +61,7 @@ export default function Gallery() {
             >
               <span className="hidden sm:block">View Project</span>
               <ArrowUpRightFromSquare />
+              <span className="max-sm:sr-only sm:hidden">View Project</span>
             </AnimatedAnchor>
           </div>
 
