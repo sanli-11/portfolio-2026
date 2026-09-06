@@ -32,6 +32,8 @@ interface ContactDialogProps {
 }
 
 export default function ContactDialog({ open, onClose }: ContactDialogProps) {
+  const [buttonTitle, setButtonTitle] = useState("Send");
+
   const dialogRef = useRef<HTMLElement>(null);
   const previouslyFocusedElement = useRef<HTMLElement | null>(null);
 
@@ -97,9 +99,11 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
     });
   };
 
-  const handleSubmit: SubmitEventHandler<HTMLFormElement> = (event) => {
+  const handleSubmit: SubmitEventHandler<HTMLFormElement> = async (event) => {
     event.preventDefault();
-    submitForm(dialogRef, form, setForm, setErrors);
+    const success = await submitForm(dialogRef, form, setForm, setErrors);
+
+    if (success) setButtonTitle("Sent");
   };
 
   return (
@@ -337,8 +341,9 @@ export default function ContactDialog({ open, onClose }: ContactDialogProps) {
                     size="large"
                     type="submit"
                     className="ml-auto"
+                    disabled={buttonTitle === "Sent"}
                   >
-                    Send
+                    {buttonTitle}
                   </AnimatedButton>
                 </form>
               </motion.div>

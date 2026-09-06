@@ -1,4 +1,4 @@
-type Data = {
+type FormData = {
   name: string;
   email: string;
   organization: string;
@@ -6,9 +6,9 @@ type Data = {
   projectDetails: string;
 };
 
-type FormErrors = Partial<Record<keyof Data, string>>;
+type FormErrors = Partial<Record<keyof FormData, string>>;
 
-export function validateForm(form: Data): FormErrors {
+export function validateForm(form: FormData): FormErrors {
   const nextErrors: FormErrors = {};
 
   const trimmedName = form.name.trim();
